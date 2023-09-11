@@ -13,7 +13,7 @@ export const BookCheckOutPage = () => {
 
   useEffect(() => {
     const fetchBook = async () => {
-      const baseUrl: string = `http://localhost:8080/api/books/${bookId}`;
+      const baseUrl: string = `http://localhost:8080/api/books/${bookId}`; // TODO: Move base URL to environment variable
       // fetching the url data
       const response = await fetch(baseUrl);
       //failure scenario
