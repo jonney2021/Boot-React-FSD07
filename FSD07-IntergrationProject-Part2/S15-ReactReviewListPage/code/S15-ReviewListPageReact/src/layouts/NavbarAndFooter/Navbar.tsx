@@ -48,7 +48,11 @@ export const Navbar = () => {
             {/* add a authState judgement, if user is already authenticated, shows logout button;else sign in button */}
             {!authState.isAuthenticated ? (
               <li className="nav-item m-1">
-                <Link type="button" className="btn btn-outline-light" to="/login">
+                <Link
+                  type="button"
+                  className="btn btn-outline-light"
+                  to="/login"
+                >
                   Sign in
                 </Link>
               </li>

@@ -54,9 +54,7 @@ export const Carousel = () => {
   }, []);
   // when in loading process, show: "Loading..."
   if (isLoading) {
-    return (
-      <SpinnerLoading/>
-    );
+    return <SpinnerLoading />;
   }
   // if there is error in fetch data
   if (httpError) {
@@ -97,7 +95,7 @@ export const Carousel = () => {
           </div>
           <div className="carousel-item">
             <div className="row d-flex justify-content-center align-item-center">
-               {/* get the last three books from the 9 books array */}
+              {/* get the last three books from the 9 books array */}
               {books.slice(6, 9).map((book) => (
                 <ReturnBook book={book} key={book.id} />
               ))}
@@ -132,9 +130,8 @@ export const Carousel = () => {
       {/* mobile */}
       <div className="d-lg-none mt-3">
         <div className="row d-flex justify-content-center align-items-center">
-           {/* get the last 8th books from the 9 books array */}
-            <ReturnBook book={books[7]} key={books[7].id} />
-              
+          {/* get the last 8th books from the 9 books array */}
+          <ReturnBook book={books[7]} key={books[7].id} />
         </div>
       </div>
       <div className="homepage-carousel-title mt-3">
