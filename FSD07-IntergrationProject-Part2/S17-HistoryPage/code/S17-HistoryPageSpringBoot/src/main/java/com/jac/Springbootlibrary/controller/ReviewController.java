@@ -13,7 +13,7 @@ public class ReviewController {
     private ReviewService reviewService;
     // ReviewService constructor
     public ReviewController (ReviewService reviewService) {
-        this.reviewService = reviewService;
+        this.reviewService = reviewService; 
     }
 
    // use PostMapping to save the review

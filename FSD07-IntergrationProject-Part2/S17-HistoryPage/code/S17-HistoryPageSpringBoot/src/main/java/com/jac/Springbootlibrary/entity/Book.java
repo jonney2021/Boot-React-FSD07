@@ -14,7 +14,7 @@ public class Book {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "title")
+    @Column(name = "title") 
     private String title;
 
     @Column(name = "author")

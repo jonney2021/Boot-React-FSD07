@@ -18,7 +18,7 @@ export const StarsReview: React.FC<{ rating: number; size: number }> = (
         halfStars = halfStars + 1;
         rating = rating - 0.5;
       } else if (rating === 0) {
-         // calculate how many empty stars we can have
+        // calculate how many empty stars we can have
         emptyStars = emptyStars + 1;
       } else {
         break;

@@ -14,7 +14,7 @@ For further reference, please consider the following sections:
 * [Rest Repositories](https://docs.spring.io/spring-boot/docs/2.7.8/reference/htmlsingle/#howto.data-access.exposing-spring-data-repositories-as-rest)
 * [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.7.8/reference/htmlsingle/#data.sql.jpa-and-spring-data)
 
-### Guides
+### Guides 
 The following guides illustrate how to use some features concretely:
 
 * [Accessing JPA Data with REST](https://spring.io/guides/gs/accessing-data-rest/)

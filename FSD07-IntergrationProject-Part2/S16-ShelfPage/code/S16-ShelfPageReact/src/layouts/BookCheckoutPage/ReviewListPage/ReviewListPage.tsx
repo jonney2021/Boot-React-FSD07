@@ -21,7 +21,9 @@ export const ReviewListPage = () => {
   useEffect(() => {
     const fetchBookReviews = async () => {
       // add page and size to  url, to call specific book
-      const reviewUrl: string = `http://localhost:8080/api/reviews/search/findByBookId?bookId=${bookId}&page=${currentPage - 1}&size=${reviewsPerPage}`;
+      const reviewUrl: string = `http://localhost:8080/api/reviews/search/findByBookId?bookId=${bookId}&page=${
+        currentPage - 1
+      }&size=${reviewsPerPage}`;
       const responseReviews = await fetch(reviewUrl);
       if (!responseReviews.ok) {
         throw new Error("Something went wrong!");
@@ -73,7 +75,10 @@ export const ReviewListPage = () => {
   const indexOfFirstReview: number = indexOfLastReview - reviewsPerPage;
   // if current page is not the last page, last item is the current page *reviews per page;
   // if current page is the last page, the last item is the last element of whole reviews
-  let lastItem = reviewsPerPage * currentPage <= totalAmountOfReviews ? reviewsPerPage * currentPage : totalAmountOfReviews;
+  let lastItem =
+    reviewsPerPage * currentPage <= totalAmountOfReviews
+      ? reviewsPerPage * currentPage
+      : totalAmountOfReviews;
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
@@ -92,7 +97,13 @@ export const ReviewListPage = () => {
         ))}
       </div>
       {/* if there is more than page */}
-      {totalPages > 1 && <Pagination currentPage={currentPage} totalPages={totalPages} paginate={paginate} />}
+      {totalPages > 1 && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          paginate={paginate}
+        />
+      )}
     </div>
   );
 };

@@ -17,19 +17,22 @@ export const LatestReviews: React.FC<{
         {/* check if there is a review */}
         {props.reviews.length > 0 ? (
           <>
-          {/* we just get 3 reviews */}
+            {/* we just get 3 reviews */}
             {props.reviews.slice(0, 3).map((eachReview) => (
               <Review review={eachReview} key={eachReview.id}></Review>
             ))}
             <div className="m-3">
-              <Link type="button" className="btn main-color btn-md text-white" to={`/reviewlist/${props.bookId}`}>
+              <Link
+                type="button"
+                className="btn main-color btn-md text-white"
+                to={`/reviewlist/${props.bookId}`}
+              >
                 Reach all reviews.
               </Link>
             </div>
           </>
-        ) :
-        // if there is no review existed
-        (
+        ) : (
+          // if there is no review existed
           <div className="m-3">
             <p className="lead">Currently there are no reviews for this book</p>
           </div>

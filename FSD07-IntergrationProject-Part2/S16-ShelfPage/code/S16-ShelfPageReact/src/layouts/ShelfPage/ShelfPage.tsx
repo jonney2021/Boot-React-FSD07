@@ -33,10 +33,20 @@ export const ShelfPage = () => {
           </div>
         </nav>
         <div className="tab-content" id="nav-tabContent">
-          <div className="tab-pane fade show active" id="nav-loans" role="tabpanel" aria-labelledby="nav-loans-tab">
-            <Loans/>
+          <div
+            className="tab-pane fade show active"
+            id="nav-loans"
+            role="tabpanel"
+            aria-labelledby="nav-loans-tab"
+          >
+            <Loans />
           </div>
-          <div className="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
+          <div
+            className="tab-pane fade"
+            id="nav-history"
+            role="tabpanel"
+            aria-labelledby="nav-history-tab"
+          >
             <p> Checkout History</p>
           </div>
         </div>

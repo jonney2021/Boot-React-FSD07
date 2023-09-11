@@ -32,6 +32,6 @@ public class ExtractJWT {
         if (map.containsKey(extraction)) {
             return map.get(extraction);
         }
-        return null;
+        return null; 
     }
 }

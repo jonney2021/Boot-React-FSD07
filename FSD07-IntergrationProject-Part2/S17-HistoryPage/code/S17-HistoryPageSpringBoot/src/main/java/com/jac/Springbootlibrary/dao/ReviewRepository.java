@@ -13,3 +13,4 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
     // find by userEmail and Book Id
     Review findByUserEmailAndBookId(String userEmail, Long bookId);
 }
+ 

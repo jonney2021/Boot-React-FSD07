@@ -20,7 +20,7 @@ public class Review {
 
     @Column(name = "user_email")
     private String userEmail;
-
+ 
     @Column(name = "date")
     @CreationTimestamp
     private Date date;

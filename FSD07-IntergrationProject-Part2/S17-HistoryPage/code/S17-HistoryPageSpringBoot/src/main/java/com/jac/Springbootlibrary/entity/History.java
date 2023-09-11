@@ -21,7 +21,7 @@ public class History {
         this.author = author;
         this.description = description;
         this.img = img;
-    }
+    } 
 
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)

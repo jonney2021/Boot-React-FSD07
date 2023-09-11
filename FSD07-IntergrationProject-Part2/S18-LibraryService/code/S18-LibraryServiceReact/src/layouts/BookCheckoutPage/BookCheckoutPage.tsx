@@ -251,14 +251,14 @@ export const BookCheckoutPage = () => {
     }
     setIsCheckedOut(true);
   }
-  // submit review 
+  // submit review
   async function submitReview(starInput: number, reviewDescription: string) {
     let bookId: number = 0;
     if (book?.id) {
       //grab the bookId
       bookId = book.id;
     }
-  //create a new review request based on the star input , bookId and description
+    //create a new review request based on the star input , bookId and description
     const reviewRequestModel = new ReviewRequestModel(
       starInput,
       bookId,

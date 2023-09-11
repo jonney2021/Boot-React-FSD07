@@ -51,7 +51,7 @@ export const CheckoutAndReviewBox: React.FC<{
     // if the user is authenticates and has not left a review
     if (props.isAuthenticated && !props.isReviewLeft) {
       return (
-        <p>          
+        <p>
           <LeaveAReview submitReview={props.submitReview} />
         </p>
       );
