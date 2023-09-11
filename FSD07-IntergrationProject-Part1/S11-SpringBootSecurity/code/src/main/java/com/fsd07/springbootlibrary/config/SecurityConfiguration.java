@@ -25,11 +25,12 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         // Disable Cross Site Request Forgery
+        // TODO: Refactor the filter chain configurations into smaller, testable methods.
         http.csrf().disable();
 
         //Protect endpoints ar /api/<type>/secure
         http.authorizeRequests(configurer ->
-                configurer.antMatchers("/api/books/secure/**")
+                configurer.antMatchers("/api/books/secure/**") // TODO: Add dynamic URL-based security policies depending on user roles or permissions.
                         .authenticated())// only authenticated user can access the routes math
                 .oauth2ResourceServer() // spring boot act as oauth2ResourceServer
                 .jwt();  // spring boot use jwt
@@ -41,7 +42,7 @@ public class SecurityConfiguration {
         http.setSharedObject(ContentNegotiationStrategy.class,new HeaderContentNegotiationStrategy());
 
         // Force a non-empty response body for 401's to make the response friendly
-        Okta.configureResourceServer401ResponseBody(http);
+        Okta.configureResourceServer401ResponseBody(http); // TODO: Customize the 401 response body to provide more informative error messages.
         return http.build();
     }
 
