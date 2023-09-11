@@ -16,6 +16,7 @@ export const Carousel = () => {
       const baseUrl: string = "http://localhost:8080/api/books";
       const url: string = `${baseUrl}?page=0&size=9`;
       // fetching the url data
+      // TODO: Add authentication for API call
       const response = await fetch(url);
       //failure scenario
       if (!response.ok) {
@@ -29,6 +30,7 @@ export const Carousel = () => {
       const loadedBooks: BookModel[] = [];
       // iterate the object in responseData, push them into the book array,and set the loading process finished.
       for (const key in responseData) {
+        // TODO: Add logic to filter out books based on conditions
         loadedBooks.push({
           id: responseData[key].id,
           title: responseData[key].title,
@@ -129,6 +131,7 @@ export const Carousel = () => {
         </div>
       </div>
       <div className="homepage-carousel-title mt-3">
+        // TODO: Implement functionality for the 'View more' button
         <a className="btn btn-outline-secondary btn-lg" href="#">
           View more
         </a>
