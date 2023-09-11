@@ -31,8 +31,10 @@ public class BookService {
     }
 
     public Book checkoutBook(String userEmail, Long bookId) throws Exception{
+        // TODO: Add logging to track user interactions and system behavior.
         Optional<Book> book = bookRepository.findById(bookId);
-        Checkout validateCheckout = checkoutRepository.findByUserEmailAndBookId(userEmail,bookId);
+        Checkout validateCheckout = checkoutRepository.findByUserEmailAndBookId(userEmail,bookId); // TODO: Optimize this query by possibly cache frequent checks.
+
 
         if(!book.isPresent() || validateCheckout != null || book.get().getCopiesAvailable()<=0){
             throw new Exception("Book doesn't exist or already checked out by user");
@@ -48,6 +50,7 @@ public class BookService {
     }
 
     public Boolean checkoutBookByUser(String userEmail, Long bookId){
+        // TODO: Consider refactoring to reduce duplicated code.
         Checkout validateCheckout = checkoutRepository.findByUserEmailAndBookId(userEmail, bookId);
         if(validateCheckout != null){
             return true;
@@ -57,6 +60,7 @@ public class BookService {
     }
 
     public int currentLoansCount(String userEmail){
+        // TODO: Implement pagination and setting a maximum limit.
         return checkoutRepository.findBooksByUserEmail(userEmail).size();
     }
 }
