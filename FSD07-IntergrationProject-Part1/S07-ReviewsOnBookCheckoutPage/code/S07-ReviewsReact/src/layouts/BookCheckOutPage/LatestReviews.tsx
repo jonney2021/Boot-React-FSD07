@@ -9,6 +9,7 @@ export const LatestReviews: React.FC<{
 }> = (props) => {
   return (
     <div className={props.mobile ? "mt-3" : "row mt-5"}>
+      {/* TODO: Refactor to use responsive CSS classes instead of JavaScript logic */}
       <div className={props.mobile ? "" : "col-sm-2 col-md-2"}>
         <h2>Latest Reviews:</h2>
       </div>
@@ -16,6 +17,7 @@ export const LatestReviews: React.FC<{
         {props.reviews.length > 0 ? (
           <>
             {props.reviews.slice(0, 3).map((eachReview) => (
+            // TODO: Implement pagination or a "See More" feature
               <Review review={eachReview} key={eachReview.id}></Review>
             ))}
             <div className="m-3">
@@ -24,6 +26,7 @@ export const LatestReviews: React.FC<{
                 className="btn main-color btn-md text-white"
                 to="#"
               >
+                {/* TODO: Implement link to the 'All Reviews' page. */}
                 Reach all reviews
               </Link>
             </div>
@@ -32,6 +35,7 @@ export const LatestReviews: React.FC<{
           <div className="m-3">
             <p className="lead">
               Currently there are no reviews for this book.
+              {/* TODO: Enhance the 'No Reviews' message display. */}
             </p>
           </div>
         )}
