@@ -4,22 +4,22 @@ import "@okta/okta-signin-widget/dist/css/okta-sign-in.min.css";
 import { oktaConfig } from "../lib/oktaConfig";
 
 const OktaSignInWidget = ({ onSuccess, onError }) => {
-  const widgetRef = useRef();
+  const widgetRef = useRef(); // TODO: Customize OktaSignIn widget features, such as additional buttons or styles.
 
   useEffect(() => {
     if (!widgetRef.current) {
       return false;
     }
 
-    const widget = new OktaSignIn(oktaConfig);
+    const widget = new OktaSignIn(oktaConfig); // TODO: Add support for social logins.
 
     widget
       .showSignInToGetTokens({
         el: widgetRef.current,
       })
       .then(onSuccess)
-      .catch(onError);
-    return () => widget.remove();
+      .catch(onError); // TODO: Handle specific error types and notify the user accordingly.
+    return () => widget.remove(); // TODO: Perform additional clean-up if needed.
   }, [onSuccess, onError]);
 
   return (
