@@ -23,12 +23,13 @@ public class BookController {
 
     @GetMapping("/secure/currentloans/count")
     public int currentLoandCount(){
-        String userEmail = "testuser@email.com";
+        String userEmail = "testuser@email.com"; // TODO: Implement dynamic user authentication to replace hardcoded user email.
         return bookService.currentLoansCount(userEmail);
     }
 
     @GetMapping("/secure/ischeckout/byuser")
     public Boolean checkoutBookByUser(@RequestParam Long bookId){
+        // TODO: Add validation for the request parameters.
         String userEmail = "testuser@email.com";
         return bookService.checkoutBookByUser(userEmail, bookId);
     }
