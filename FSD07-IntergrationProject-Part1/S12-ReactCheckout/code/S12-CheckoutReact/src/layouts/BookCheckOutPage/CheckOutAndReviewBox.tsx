@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import BookModel from "../../models/BookModel";
 
 export const CheckoutAndReviewBox: React.FC<{
+  // TODO: Add strict types for isAuthenticated and checkoutBook props
   book: BookModel | undefined;
   mobile: boolean;
   currentLoansCount: number;
@@ -49,6 +50,7 @@ export const CheckoutAndReviewBox: React.FC<{
             <b>{props.currentLoansCount}/5 </b>
             books checked out
           </p>
+          {/* TODO: Add error handling for failed checkout and unavailable book */}
           <hr />
           {/* if we have book and its number of copies available which is positive, we let it "avaiable"; if not let it Wait list */}
           {props.book &&
@@ -76,7 +78,8 @@ export const CheckoutAndReviewBox: React.FC<{
         <p className="mt-3">
           This number can change until placing order has been complete.
         </p>
-        <p>Sign in to be able to leave a review.</p>
+        <p>Sign in to be able to leave a review.</p> 
+        {/* TODO: Implement the review feature */}
       </div>
     </div>
   );
