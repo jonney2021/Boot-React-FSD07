@@ -17,7 +17,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
  */
 @Configuration
 public class MyDataRestConfig implements RepositoryRestConfigurer {
-    private String theAllowedOrigins = "http://localhost:3000";
+    private String theAllowedOrigins = "http://localhost:3000"; // TODO: Make this configurable
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config,
@@ -27,14 +27,16 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
                 HttpMethod.PATCH,
                 HttpMethod.DELETE,
                 HttpMethod.PUT};
+        // TODO: Revisit if these actions should be enabled in the future
 
         config.exposeIdsFor(Book.class);
-        config.exposeIdsFor(Review.class);
+        config.exposeIdsFor(Review.class); // TODO: Consider exposing IDs for other classes
 
         disableHttpMethods(Book.class, config, theUnsupportedActions);
         disableHttpMethods(Review.class, config, theUnsupportedActions);
 
         /* Configure CORS Mapping */
+        // TODO: Add more advanced CORS configuration
         cors.addMapping(config.getBasePath() + "/**")
                 .allowedOrigins(theAllowedOrigins);
     }
@@ -49,4 +51,6 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
                 .withCollectionExposure((metdata, httpMethods) ->
                         httpMethods.disable(theUnsupportedActions));
     }
+
+    // TODO: Implement authentication and authorization
 }
