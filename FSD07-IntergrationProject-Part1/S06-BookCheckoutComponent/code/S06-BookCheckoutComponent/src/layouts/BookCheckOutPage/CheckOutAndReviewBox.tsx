@@ -16,6 +16,7 @@ export const CheckoutAndReviewBox: React.FC<{
         <div className="mt-3">
           <p>
             <b>0/5 </b>
+            {/* TODO: Replace with i18n variables */}
             books checked out
           </p>
           <hr />
@@ -40,7 +41,7 @@ export const CheckoutAndReviewBox: React.FC<{
           </div>
         </div>
         {/* sign in button */}
-        <Link to="/#" className="btn btn-success btn-lg">
+        <Link to="/#" className="btn btn-success btn-lg"> {/* TODO: Link to actual sign-in page */}
           Sign In
         </Link>
         <hr />
