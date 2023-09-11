@@ -19,7 +19,8 @@ export const Heros = () => {
                 Whether it is to learn a new skill or grow within one, we will
                 be able to provide the top content for you!
               </p>
-              {authState?.isAuthenticated ? (
+              {authState?.isAuthenticated ? ( 
+      // TODO: Extend authentication to include roles (admin, user, etc.)
                 <Link
                   type="button"
                   className="btn main-color btn-lg text-white"
@@ -40,6 +41,7 @@ export const Heros = () => {
             <div className="ml-2">
               <h1>Our collection is always changing!</h1>
               <p className="lead">
+                {/* TODO: Add a call-to-action (CTA) that engages the user to check daily updates. */}
                 Try to check in daily as our collection is always changing! We
                 work nonstop to provide the most accurate book selection
                 possible for our eBook Read students! We are diligent about our
