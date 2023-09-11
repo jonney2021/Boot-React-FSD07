@@ -15,6 +15,7 @@ const oktaAuth = new OktaAuth(oktaConfig);
 
 export const App = () => {
   const customAuthHandler = () => {
+    // TODO: Add user feedback for authentication events.
     history.push("/login");
   };
 
@@ -37,12 +38,16 @@ export const App = () => {
               <Redirect to="/home" />
             </Route>
             <Route path="/home">
+              {/* TODO: Implement React Lazy and Suspense for better code splitting and loading. */}
+              {/* TODO: Add meta tags and other SEO optimizations. */}
               <HomePage />
             </Route>
             <Route path="/search">
               <SearchBooksPage />
             </Route>
             <Route path="/checkout/:bookId">
+              {/* TODO: Consider making the route more dynamic based on different book categories or types. */}
+              {/* TODO: Add role-based access control to this route. */}
               <BookCheckOutPage />
             </Route>
             <Route
@@ -50,6 +55,7 @@ export const App = () => {
               render={() => <LoginWidget config={oktaConfig} />}
             />
             <Route path="/login/callback" component={LoginCallback} />
+            {/* TODO: Add a 404 Not Found route for undefined paths. */}
           </Switch>
         </div>
         <Footer />
