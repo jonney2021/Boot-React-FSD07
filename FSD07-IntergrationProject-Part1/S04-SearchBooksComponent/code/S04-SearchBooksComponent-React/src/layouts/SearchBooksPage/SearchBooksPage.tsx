@@ -125,6 +125,7 @@ export const SearchBooksPage = () => {
       : totalAmountOfBooks;
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+  // TODO: Enhance pagination logic to support more features
 
   return (
     <div>
@@ -134,6 +135,7 @@ export const SearchBooksPage = () => {
             <div className="col-6">
               <div className="d-flex">
                 {/* Search input box */}
+                {/* TODO: Add advanced search features */}
                 <input
                   className="form-control me-2"
                   type="search"
