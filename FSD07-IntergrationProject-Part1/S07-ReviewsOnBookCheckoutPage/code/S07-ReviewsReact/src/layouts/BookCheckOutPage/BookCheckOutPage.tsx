@@ -8,7 +8,7 @@ import { LatestReviews } from "./LatestReviews";
 
 export const BookCheckOutPage = () => {
   // create useState
-  const [book, setBook] = useState<BookModel>();
+  const [book, setBook] = useState<BookModel>(); // TODO: Consider introducing state management if state complexity increases
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState(null);
 
@@ -16,12 +16,13 @@ export const BookCheckOutPage = () => {
   const [reviews, setReviews] = useState<ReviewModel[]>([]);
   const [totalStars, setTotalStars] = useState(0);
   const [isLoadingReview, setIsLoadingReview] = useState(true);
+  // TODO: Consider unifying loading states if they are often needed together
 
   const bookId = window.location.pathname.split("/")[2];
 
   useEffect(() => {
     const fetchBook = async () => {
-      const baseUrl: string = `http://localhost:8080/api/books/${bookId}`;
+      const baseUrl: string = `http://localhost:8080/api/books/${bookId}`; // TODO: Make the API base URL configurable
       // fetching the url data
       const response = await fetch(baseUrl);
       //failure scenario
@@ -75,6 +76,7 @@ export const BookCheckOutPage = () => {
         });
         weightedStarReviews = weightedStarReviews + responseData[key].rating;
       }
+      // TODO: Consider moving API calls to utility functions or custom hooks.
 
       if (loadedReviews) {
         const round = (
