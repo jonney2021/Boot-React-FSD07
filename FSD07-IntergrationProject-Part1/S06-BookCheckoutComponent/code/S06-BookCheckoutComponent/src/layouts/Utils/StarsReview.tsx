@@ -1,4 +1,8 @@
 export const StarsReview: React.FC<{ rating: number; size: number }> = (
+
+  // TODO: Consider optimizing the SVG rendering for performance
+  // TODO: Make SVG size responsive based on viewport
+  
   props
 ) => {
   let rating = props.rating;
