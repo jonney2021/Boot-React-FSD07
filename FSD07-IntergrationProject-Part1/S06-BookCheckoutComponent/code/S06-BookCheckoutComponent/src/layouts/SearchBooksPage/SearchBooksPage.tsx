@@ -15,6 +15,7 @@ export const SearchBooksPage = () => {
   // pagination array
   const [currentPage, setCurrentPage] = useState(1);
   // each page show 5 books
+  // TODO: Make booksPerPage dynamic or configurable
   const [booksPerPage] = useState(5);
   // total amounts of books
   const [totalAmountOfBooks, setTotalAmountOfBooks] = useState(0);
@@ -30,7 +31,7 @@ export const SearchBooksPage = () => {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const baseUrl: string = "http://localhost:8080/api/books";
+      const baseUrl: string = "http://localhost:8080/api/books"; // TODO: Move base URL to environment variable
       let url: string = "";
 
       // get the url
