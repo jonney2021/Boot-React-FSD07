@@ -40,7 +40,7 @@ export const BookCheckoutPage = () => {
   // fetch book by ID useEffect
   useEffect(() => {
     const fetchBook = async () => {
-      const baseUrl: string = `http://localhost:8080/api/books/${bookId}`;
+      const baseUrl: string = `${process.env.REACT_APP_API}/books/${bookId}`;
 
       // fetching the url data
       const response = await fetch(baseUrl);
@@ -77,7 +77,7 @@ export const BookCheckoutPage = () => {
   useEffect(() => {
     const fetchBookReviews = async () => {
       // review url, to call specific book
-      const reviewUrl: string = `http://localhost:8080/api/reviews/search/findByBookId?bookId=${bookId}`;
+      const reviewUrl: string = `${process.env.REACT_APP_API}/reviews/search/findByBookId?bookId=${bookId}`;
       const responseReviews = await fetch(reviewUrl);
       if (!responseReviews.ok) {
         throw new Error("Something went wrong!");
@@ -125,7 +125,7 @@ export const BookCheckoutPage = () => {
     const fetchUserReviewBook = async () => {
       //call api with the url and method type , headers
       if (authState && authState.isAuthenticated) {
-        const url = `http://localhost:8080/api/reviews/secure/user/book/?bookId=${bookId}`;
+        const url = `${process.env.REACT_APP_API}/reviews/secure/user/book/?bookId=${bookId}`;
         const requestOptions = {
           method: "GET",
           headers: {
@@ -157,7 +157,7 @@ export const BookCheckoutPage = () => {
       // make sure user is autenticated
       if (authState && authState.isAuthenticated) {
         // endpoint we need to call
-        const url = `http://localhost:8080/api/books/secure/currentloans/count`;
+        const url = `${process.env.REACT_APP_API}/books/secure/currentloans/count`;
         // need to specify the method type and headers
         const requestOptions = {
           method: "GET",
@@ -192,7 +192,7 @@ export const BookCheckoutPage = () => {
     // same logic as the loans count useEffect
     const fetchUserCheckedOutBook = async () => {
       if (authState && authState.isAuthenticated) {
-        const url = `http://localhost:8080/api/books/secure/ischeckedout/byuser/?bookId=${bookId}`;
+        const url = `${process.env.REACT_APP_API}/books/secure/ischeckedout/byuser/?bookId=${bookId}`;
         const requestOptions = {
           method: "GET",
           headers: {
@@ -235,7 +235,7 @@ export const BookCheckoutPage = () => {
   }
   async function checkoutBook() {
     // call the api
-    const url = `http://localhost:8080/api/books/secure/checkout/?bookId=${book?.id}`;
+    const url = `${process.env.REACT_APP_API}/books/secure/checkout/?bookId=${book?.id}`;
     // specify the method type and th headers
     const requestOptions = {
       method: "PUT",
@@ -265,7 +265,7 @@ export const BookCheckoutPage = () => {
       reviewDescription
     );
     // url to access to our spring boot application
-    const url = `http://localhost:8080/api/reviews/secure`;
+    const url = `${process.env.REACT_APP_API}/reviews/secure`;
     // method type and headers
     const requestOptions = {
       method: "POST",

@@ -27,7 +27,7 @@ export const SearchBooksPage = () => {
 
   useEffect(() => {
     const fetchBooks = async () => {
-      const baseUrl: string = "http://localhost:8080/api/books";
+      const baseUrl: string = "${process.env.REACT_APP_API}/books";
       // 1.change the query parameter from "size = 9" to "size=5"
       // 2.change the query parameter page number from 0 to a  dynamically number
       // let url: string = `${baseUrl}?page=${currentPage - 1}&size=${booksPerPage}`;

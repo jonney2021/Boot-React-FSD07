@@ -28,7 +28,7 @@ export const ChangeQuantityOfBook: React.FC<{
   // call increase quantity endpoint
   async function increaseQuantity() {
     // url string
-    const url = `http://localhost:8080/api/admin/secure/increase/book/quantity/?bookId=${props.book?.id}`;
+    const url = `${process.env.REACT_APP_API}/admin/secure/increase/book/quantity/?bookId=${props.book?.id}`;
     // specify method and headers
     const requestOptions = {
       method: "PUT",
@@ -50,7 +50,7 @@ export const ChangeQuantityOfBook: React.FC<{
 
   // call decrease quantity endpoint
   async function decreaseQuantity() {
-    const url = `http://localhost:8080/api/admin/secure/decrease/book/quantity/?bookId=${props.book?.id}`;
+    const url = `${process.env.REACT_APP_API}/admin/secure/decrease/book/quantity/?bookId=${props.book?.id}`;
     const requestOptions = {
       method: "PUT",
       headers: {
@@ -69,7 +69,7 @@ export const ChangeQuantityOfBook: React.FC<{
 
   // call delete book endpoint
   async function deleteBook() {
-    const url = `http://localhost:8080/api/admin/secure/delete/book/?bookId=${props.book?.id}`;
+    const url = `${process.env.REACT_APP_API}/admin/secure/delete/book/?bookId=${props.book?.id}`;
     const requestOptions = {
       method: "DELETE",
       headers: {

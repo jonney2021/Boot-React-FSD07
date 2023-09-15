@@ -23,7 +23,9 @@ export const Messages = () => {
       // only if user is authenticated
       if (authState && authState?.isAuthenticated) {
         // save the string url to a const
-        const url = `http://localhost:8080/api/messages/search/findByUserEmail/?userEmail=${
+        const url = `${
+          process.env.REACT_APP_API
+        }/messages/search/findByUserEmail/?userEmail=${
           authState?.accessToken?.claims.sub
         }&page=${currentPage - 1}&size=${messagesPerPage}`;
         const requestOptions = {

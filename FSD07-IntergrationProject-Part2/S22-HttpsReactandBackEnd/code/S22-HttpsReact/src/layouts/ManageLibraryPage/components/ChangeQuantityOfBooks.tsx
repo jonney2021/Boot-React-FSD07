@@ -26,7 +26,7 @@ export const ChangeQuantityOfBooks = () => {
   // copy useEffect, isLoading and httpError from SearchBooksPage.tsx
   useEffect(() => {
     const fetchBooks = async () => {
-      const baseUrl: string = `http://localhost:8080/api/books?page=${
+      const baseUrl: string = `${process.env.REACT_APP_API}/books?page=${
         currentPage - 1
       }&size=${booksPerPage}`;
       // fetching the url data

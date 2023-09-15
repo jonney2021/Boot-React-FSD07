@@ -14,7 +14,7 @@ export const PostNewMessage = () => {
   // fetch data from the database
   async function submitNewQuestion() {
     // create a const to save our url string
-    const url = `http://localhost:8080/api/messages/secure/add/message`;
+    const url = `${process.env.REACT_APP_API}/messages/secure/add/message`;
     // if the user is authenticated, and input both the title and qustion of the message
     if (authState?.isAuthenticated && title !== "" && question !== "") {
       //create a new messageModel with the user input and assign it to our const messageRequestModel

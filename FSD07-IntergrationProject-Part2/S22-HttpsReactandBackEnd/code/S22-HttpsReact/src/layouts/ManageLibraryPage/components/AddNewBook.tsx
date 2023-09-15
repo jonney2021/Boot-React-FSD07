@@ -45,7 +45,7 @@ export const AddNewBook = () => {
 
   async function submitNewBook() {
     // url string
-    const url = `http://localhost:8080/api/admin/secure/add/book`;
+    const url = `${process.env.REACT_APP_API}/admin/secure/add/book`;
     // user is authenticated, all fields are not null:
     if (
       authState?.isAuthenticated &&
