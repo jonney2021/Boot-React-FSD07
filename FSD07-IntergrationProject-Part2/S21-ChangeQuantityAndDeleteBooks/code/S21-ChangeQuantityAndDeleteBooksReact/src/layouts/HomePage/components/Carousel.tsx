@@ -15,7 +15,6 @@ export const Carousel = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       const baseUrl: string = "http://localhost:8080/api/books";
-
       const url: string = `${baseUrl}?page=0&size=9`;
       // fetching the url data
       const response = await fetch(url);
@@ -25,7 +24,6 @@ export const Carousel = () => {
       }
       // transfer the url data into json;
       const responseJson = await response.json();
-
       // get the data which is the object of embedded books
       const responseData = responseJson._embedded.books;
       // create a book array

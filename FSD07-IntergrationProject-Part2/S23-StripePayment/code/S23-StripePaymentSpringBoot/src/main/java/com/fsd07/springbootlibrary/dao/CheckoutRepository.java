@@ -1,0 +1,30 @@
+package com.fsd07.springbootlibrary.dao;
+
+import com.fsd07.springbootlibrary.entity.Checkout;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
+
+/**
+ * @Author: Yeming Hu
+ * @Date: 9/9/2023
+ * @Description: com.fsd07.springbootlibrary.dao
+ * @Version: 1.0
+ */
+public interface CheckoutRepository extends JpaRepository<Checkout, Long> {
+
+    // find a specific checkout record based on the user's email and a book ID.
+    Checkout findByUserEmailAndBookId(String userEmail, Long bookId);
+
+    // return a list that save all the books checked out which are found by userEmail
+    List<Checkout> findBooksByUserEmail(String userEmail);
+
+    // if a book is deleted, we also need to delete it in checkout repository.
+    @Modifying
+    @Query("delete from Checkout where book_id in :book_id")
+    void deleteAllByBookId(@Param("book_id") Long bookId);
+
+}

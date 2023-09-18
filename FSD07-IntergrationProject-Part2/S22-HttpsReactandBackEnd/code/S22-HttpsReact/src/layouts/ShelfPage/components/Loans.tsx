@@ -187,7 +187,6 @@ export const Loans = () => {
                   returnBook={returnBook}
                   renewLoan={renewLoan}
                 />
-                /
               </div>
             ))}
           </>

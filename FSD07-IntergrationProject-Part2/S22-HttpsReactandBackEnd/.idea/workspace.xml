@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9c6ff7ed-d051-4069-990f-d919dd92e2ae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksReact/src/layouts/HomePage/components/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksReact/src/layouts/HomePage/components/Carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksReact/src/lib/oktaConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksReact/src/lib/oktaConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/config/MyDataRestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/config/MyDataRestConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/controller/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/controller/MessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/java/com/jac/Springbootlibrary/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../S21-ChangeQuantityAndDeleteBooks/code/S21-ChangeQuantityAndDeleteBooksSpringBoot/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/S22-HttpsReact/src/lib/oktaConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/code/S22-HttpsReact/src/lib/oktaConfig.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2VQu5RRu7EjvttWbYY4D6l5gv5J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Boot-React-FSD07/FSD07-IntergrationProject-Part2/S22-HttpsReactandBackEnd/code/S22-HttpsBackEnd",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9c6ff7ed-d051-4069-990f-d919dd92e2ae" name="Changes" comment="" />
+      <created>1694780441784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694780441784</updated>
+      <workItem from="1694780443009" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
